@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#090d0b">
+<title>Space Invaders — 1978</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3E%3Crect width=%2716%27 height=%2716%27 fill=%27%23020704%27/%3E%3Cpath d=%27M7 4h2v3h5v6H2V7h5z%27 fill=%27%239dff91%27/%3E%3C/svg%3E">
+<style>
+:root{color-scheme:dark;--green:#9dff91;--dim:#687d6d;--line:#283a2d;--paper:#e6eddb}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}body{background:#090d0b;color:var(--paper);font-family:"Courier New",monospace;font-weight:700}button{font:inherit;color:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}button:focus-visible{outline:2px solid var(--green);outline-offset:5px}.cabinet{height:100vh;height:100dvh;max-width:1100px;margin:auto;display:flex;flex-direction:column;padding:0 38px}.masthead{height:82px;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:13px;font-size:15px;letter-spacing:2px}.brand svg{width:27px;height:24px;fill:var(--green)}.edition{font-size:10px;letter-spacing:2px;color:var(--dim)}.status{display:flex;gap:9px;align-items:center;font-size:10px;letter-spacing:1px;color:#a4b5a7}.light{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 9px #9dff9144}.main{min-height:0;flex:1;display:grid;grid-template-columns:1fr minmax(0,500px) 1fr;grid-template-rows:minmax(0,1fr);gap:30px;align-items:center}.rail{font-size:10px;line-height:1.9;letter-spacing:1px;color:var(--dim)}.rail h2{font-size:10px;font-weight:400;color:#c4d0bf;letter-spacing:2px;margin:0 0 22px}.year{font-size:48px;font-weight:400;letter-spacing:-4px;line-height:1;color:#91a88f}.rail p{margin:14px 0 32px}.rule{height:1px;background:var(--line);margin:24px 0}.legend{display:flex;justify-content:space-between;gap:8px;margin:15px 0}.legend span:last-child{color:var(--paper)}.screen-column{height:100%;min-height:0;display:flex;flex-direction:column;justify-content:center;padding:20px 0 12px}.screen-head{display:flex;justify-content:space-between;color:var(--dim);font-size:9px;letter-spacing:2px;padding:0 2px 10px}.screen{position:relative;min-height:0;aspect-ratio:448/512;max-height:100%;width:100%;border:1px solid #324637;box-shadow:0 0 70px #72fc8310,inset 0 0 40px #000;overflow:hidden;background:#020704}.screen canvas{display:block;width:100%;height:100%;object-fit:contain;image-rendering:pixelated}.screen:after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,#0002 0px,#0002 1px,transparent 1px,transparent 3px);box-shadow:inset 0 0 55px #0008}.overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:#020704e8;z-index:2;padding:16px}.overlay[hidden]{display:none}.eyebrow{font-size:9px;letter-spacing:3px;color:var(--green);margin-bottom:17px}.overlay h1{font-size:clamp(24px,4vw,43px);line-height:1.1;letter-spacing:-2px;margin:0;text-shadow:3px 0 #9dff9120}.overlay h1 span{color:var(--green)}.subtitle{font-size:9px;letter-spacing:3px;color:var(--dim);margin:13px 0 28px}.attract{display:flex;gap:27px;align-items:center;margin-bottom:30px}.alien-sample{display:grid;justify-items:center;gap:12px;font-size:9px;color:#adc2b2}.alien-sample svg{height:24px;width:33px;fill:currentColor;shape-rendering:crispEdges}.start{background:var(--green);color:#0c190e;border:0;padding:15px 28px;letter-spacing:2px;font-size:11px;box-shadow:0 4px 0 #44663b}.start:hover{background:#c4ffbb}.start:active{transform:translateY(2px);box-shadow:0 2px 0 #44663b}.hint{font-size:9px;color:#809884;letter-spacing:1px;margin:19px 0 0}.screen-foot{display:flex;justify-content:space-between;font-size:9px;letter-spacing:1px;color:var(--dim);padding:11px 2px 0}.deck{flex-shrink:0;min-height:118px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 0}.movement{display:flex;gap:10px}.control{user-select:none;-webkit-user-select:none;touch-action:none;background:#111b14;border:1px solid #39513f;box-shadow:0 4px 0 #020503;border-radius:4px;height:56px;width:76px;display:grid;place-items:center;font-size:22px}.control.active,.control:active{background:#28452e;border-color:var(--green);transform:translateY(2px);box-shadow:0 2px 0 #020503}.controls-caption{font-size:9px;color:var(--dim);letter-spacing:1px;margin-top:11px;text-align:center}.fire{width:148px;background:#a2f48e;color:#132310;border-color:#c3ffae;font-size:13px;letter-spacing:3px;box-shadow:0 4px 0 #395c30}.fire.active,.fire:active{background:#d0ffc1;color:#132310}.deck-center{text-align:center;display:flex;flex-direction:column;gap:13px}.deck-label{font-size:9px;letter-spacing:3px;color:var(--dim)}.utilities{display:flex;justify-content:center;gap:20px}.utility{background:none;border:0;padding:5px 0;font-size:9px;color:#a4b5a7;letter-spacing:1px}.utility:hover{color:var(--green)}.utility:disabled{opacity:.35;cursor:default}.bottom{display:flex;justify-content:space-between;font-size:8px;letter-spacing:2px;color:#526958;padding:3px 0 17px}.touch-deck{touch-action:none}
+@media(min-width:761px) and (max-height:820px){.masthead{height:60px}.screen-column{max-width:calc((100dvh - 242px)*.875);justify-self:center;width:100%}.deck{min-height:104px}.overlay h1{font-size:30px}.attract{margin-bottom:18px}.subtitle{margin-bottom:18px}}
+@media(max-width:760px), (max-height:560px){.cabinet{padding:0 16px}.masthead{height:49px;flex-shrink:0}.brand{font-size:11px;letter-spacing:1px;gap:9px}.brand svg{width:20px;height:18px}.edition{display:none}.status{font-size:8px}.main{flex:none;height:calc(68dvh - 49px);display:flex;justify-content:center;gap:0}.rail{display:none}.screen-column{padding:9px 0 6px;width:min(100%,calc((68dvh - 83px)*.875));height:100%}.screen-head{font-size:7px;padding-bottom:5px}.screen{flex:1}.screen-foot{font-size:7px;padding-top:5px}.deck{height:calc(32dvh - 25px);min-height:0;padding:14px 0 max(10px,env(safe-area-inset-bottom));gap:14px;position:relative;align-items:center}.movement{gap:8px}.control{width:clamp(57px,17vw,95px);height:clamp(64px,12dvh,112px)}.fire{width:clamp(100px,30vw,170px);font-size:14px}.deck-center{position:absolute;bottom:5px;left:0;right:0;pointer-events:none}.utilities{gap:26px;pointer-events:auto}.deck-label{display:none}.controls-caption{font-size:8px;margin-top:9px}.bottom{height:25px;padding:8px 0 4px;font-size:7px;letter-spacing:1px}.overlay h1{font-size:clamp(24px,7vw,38px)}.eyebrow{font-size:8px;margin-bottom:12px}.subtitle{font-size:7px;margin:10px 0 20px}.attract{margin-bottom:22px;gap:25px}.alien-sample{font-size:8px;gap:8px}.alien-sample svg{height:19px}.start{padding:13px 20px;font-size:10px}.hint{font-size:7px;margin-top:15px}}
+@media(max-height:560px){.masthead{height:36px}.main{height:calc(68dvh - 36px)}.screen-column{width:min(100%,calc((68dvh - 59px)*.875))}.eyebrow,.subtitle,.attract,.hint{display:none}.overlay h1{font-size:20px;margin-bottom:14px}.start{padding:8px 12px;font-size:9px}.control{height:48px}.controls-caption{display:none}.deck{padding-top:4px;padding-bottom:25px}.bottom{font-size:6px}}
+@media(prefers-reduced-motion:reduce){.screen:after{background:none}}
+</style>
+</head>
+<body>
+<div class="cabinet">
+<header class="masthead"><div class="brand"><svg viewBox="0 0 11 8" aria-hidden="true"><path d="M2 0h1v1H2zm6 0h1v1H8zM3 1h5v1H3zM2 2h7v1H2zM1 3h2v1h1V3h3v1h1V3h2v1H1zM0 4h11v2H0zm0 2h1v2H0zm2 0h7v1H2zm8 0h1v2h-1zM2 7h2v1H2zm5 0h2v1H7z"/></svg>SPACE INVADERS <span class="edition">/ ORIGINAL ARCADE</span></div><div class="status"><span class="light"></span> SYSTEM READY</div></header>
+<main class="main">
+<aside class="rail"><h2>THE ORIGINAL INVASION</h2><div class="year">1978</div><p>55 invaders.<br>One planet.<br>Your last line of defense.</p><div class="rule"></div><h2>HOW TO PLAY</h2><p>← → / A D &nbsp; MOVE<br>SPACE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FIRE<br>P / ESC &nbsp;&nbsp;&nbsp; PAUSE</p><span>STAY LOW. AIM HIGH.</span></aside>
+<section class="screen-column" aria-label="Arcade game"><div class="screen-head"><span>TAITO-ERA CLASSIC</span><span>01 / FIXED SHOOTER</span></div><div class="screen"><canvas id="game" width="448" height="512" aria-label="Space Invaders playfield. Use left and right arrows or A and D to move; Space to fire; P to pause.">Space Invaders requires a browser with HTML5 Canvas support.</canvas><div class="overlay" id="overlay"><div class="eyebrow" id="eyebrow">EARTH NEEDS A DEFENDER</div><h1 id="title">SPACE<br><span>INVADERS</span></h1><p class="subtitle" id="subtitle">THE 1978 ARCADE EXPERIENCE</p><div class="attract" id="attract"><div class="alien-sample" style="color:#e6eddb"><svg viewBox="0 0 8 8" aria-hidden="true"><path d="M3 0h2v1H3zM2 1h4v1H2zM1 2h6v1H1zM0 3h2v1H0zm3 0h2v1H3zm3 0h2v1H6zM0 4h8v1H0zM2 5h1v1H2zm3 0h1v1H5zM1 6h1v1H1zm2 0h2v1H3zm3 0h1v1H6zM0 7h1v1H0zm2 0h1v1H2zm3 0h1v1H5zm2 0h1v1H7z"/></svg>30 PTS</div><div class="alien-sample" style="color:#8ff5e5"><svg viewBox="0 0 11 8" aria-hidden="true"><path d="M2 0h1v1H2zm6 0h1v1H8zM3 1h5v1H3zM2 2h7v1H2zM1 3h2v1h1V3h3v1h1V3h2v1H1zM0 4h11v2H0zm0 2h1v2H0zm2 0h7v1H2zm8 0h1v2h-1zM2 7h2v1H2zm5 0h2v1H7z"/></svg>20 PTS</div><div class="alien-sample" style="color:#9dff91"><svg viewBox="0 0 12 8" aria-hidden="true"><path d="M3 0h6v1H3zM1 1h10v1H1zM0 2h12v1H0zM0 3h3v1H0zm4 0h4v1H4zm5 0h3v1H9zM0 4h12v1H0zM2 5h3v1H2zm5 0h3v1H7zM1 6h2v1H1zm3 0h4v1H4zm5 0h2v1H9zM2 7h2v1H2zm6 0h2v1H8z"/></svg>10 PTS</div></div><button class="start" id="start">START GAME ↗</button><p class="hint" id="hint">3 CANNONS · NO CONTINUES · MAKE IT COUNT</p></div></div><div class="screen-foot"><span>60 HZ · PIXEL PERFECT</span><span id="wave-label">WAVE 01</span></div></section>
+<aside class="rail"><h2>SCORE ADVANCE TABLE</h2><div class="legend"><span>MYSTERY SHIP</span><span>???</span></div><div class="legend"><span>SQUID</span><span>30</span></div><div class="legend"><span>CRAB</span><span>20</span></div><div class="legend"><span>OCTOPUS</span><span>10</span></div><div class="rule"></div><p>Protect your bunkers.<br>Keep the sky clear.<br>They only get faster.</p><span>INSERT SKILL, NOT COINS.</span></aside>
+</main>
+<section class="deck touch-deck" aria-label="Touch game controls"><div><div class="movement"><button class="control" id="left" aria-label="Move left">←</button><button class="control" id="right" aria-label="Move right">→</button></div><div class="controls-caption">MOVE / A D</div></div><div class="deck-center"><div class="deck-label">DEFEND THE EARTH</div><div class="utilities"><button class="utility" id="sound" aria-pressed="true">SOUND ON</button><button class="utility" id="pause" disabled>Ⅱ PAUSE</button></div></div><div><button class="control fire" id="fire" aria-label="Fire laser">FIRE <span style="font-size:9px;letter-spacing:0">●</span></button><div class="controls-caption">FIRE / SPACE</div></div></section>
+<footer class="bottom"><span>A LOVE LETTER TO THE ARCADE.</span><span>EST. 1978 / REBUILT FOR TODAY</span></footer>
+</div>
+<script>
+'use strict';
+(() => {
+const canvas = document.getElementById('game'), ctx = canvas.getContext('2d', { alpha: false });
+const $ = id => document.getElementById(id);
+const W = 448, H = 512, GREEN = '#9dff91', CYAN = '#8ff5e5', WHITE = '#e6eddb';
+const sprites = {
+ squid: ['00011000/00111100/01111110/11011011/11111111/00100100/01011010/10100101','00011000/00111100/01111110/11011011/11111111/01011010/10000001/01000010'],
+ crab: ['00100000100/00010001000/00111111100/01101110110/11111111111/10111111101/10100000101/00011011000','00100000100/10010001001/10111111101/11101110111/11111111111/01111111110/00100000100/01000000010'],
+ octopus: ['000111111000/011111111110/111111111111/111001100111/111111111111/000110011000/001001100100/110000000011','000111111000/011111111110/111111111111/111001100111/111111111111/001110011100/011001100110/001100001100'],
+ cannon: ['0000001000000/0000011100000/0000011100000/0111111111110/1111111111111/1111111111111/1111111111111/1111111111111'],
+ ufo: ['0000011111100000/0001111111111000/0011111111111100/0110110110110110/1111111111111111/0011100110011100/0001000000001000']
+};
+// Pre-render sprite frames once; the hot render loop only blits tiny bitmaps.
+const atlas = {};
+for (const [name, frames] of Object.entries(sprites)) atlas[name] = frames.map(frame => {
+ const rows = frame.split('/'), c = document.createElement('canvas'); c.width = rows[0].length * 2; c.height = rows.length * 2;
+ const g = c.getContext('2d'); g.fillStyle = name === 'cannon' ? GREEN : name === 'ufo' ? '#ff8585' : name === 'squid' ? WHITE : name === 'crab' ? CYAN : GREEN;
+ rows.forEach((row,y) => [...row].forEach((p,x) => { if(p === '1') g.fillRect(x*2,y*2,2,2); })); return c;
+});
+let audio, master, muted = false, note = 0;
+function unlockAudio() { try { if (!audio) { audio = new (window.AudioContext || window.webkitAudioContext)(); master = audio.createGain(); master.gain.value = muted ? 0 : .22; master.connect(audio.destination); } if(audio.state === 'suspended') audio.resume().catch(() => {}); } catch (_) { /* Silent play is supported. */ } }
+function tone(freq,end,duration,type='square',gain=.2) {
+ if(!audio || muted || audio.state !== 'running') return;
+ const t=audio.currentTime, o=audio.createOscillator(), g=audio.createGain(); o.type=type; o.frequency.setValueAtTime(freq,t); o.frequency.exponentialRampToValueAtTime(Math.max(1,end),t+duration); g.gain.setValueAtTime(gain,t); g.gain.exponentialRampToValueAtTime(.001,t+duration); o.connect(g); g.connect(master); o.start(t); o.stop(t+duration); o.onended=()=>{o.disconnect();g.disconnect();};
+}
+let noiseBuffer;
+function noise(duration,gain=.35) {
+ if(!audio || muted || audio.state !== 'running') return;
+ if(!noiseBuffer) { noiseBuffer=audio.createBuffer(1,audio.sampleRate,audio.sampleRate); const data=noiseBuffer.getChannelData(0); for(let i=0;i<data.length;i++) data[i]=Math.random()*2-1; }
+ const t=audio.currentTime,s=audio.createBufferSource(),g=audio.createGain(),filter=audio.createBiquadFilter(); s.buffer=noiseBuffer;filter.type='lowpass';filter.frequency.value=1500;g.gain.setValueAtTime(gain,t);g.gain.exponentialRampToValueAtTime(.001,t+duration);s.connect(filter);filter.connect(g);g.connect(master);s.start(t);s.stop(t+duration);s.onended=()=>{s.disconnect();filter.disconnect();g.disconnect();};
+}
+let high = 0; try { high = Math.max(0,Number(localStorage.getItem('invaders1978.high')) || 0); } catch (_) {}
+let state='title', score=0, lives=3, wave=1, aliens=[], bunkers=[], bombs=[], shot=null, ufo=null, effects=[], playerX=211, invulnerable=0, deathTimer=0, marchTimer=0, bombTimer=0, ufoTimer=0, nextWave=0, direction=1, frame=0, shotCount=0;
+const keys=new Set(), pointers=new Map();
+function held(action) { if(keys.has(action)) return true; for(const value of pointers.values()) if(value===action) return true; return false; }
+function clearInput() { keys.clear();physicalKeys.clear();pointers.clear(); for(const id of ['left','right','fire']) $(id).classList.remove('active'); }
+function saveHigh() { if(score>high) {high=score;try{localStorage.setItem('invaders1978.high',String(high));}catch(_){}} }
+function makeBunkers() {
+ bunkers=[];
+ for(let i=0;i<4;i++) {
+  const b={x:44+i*100,y:386,w:60,h:42,pixels:new Uint8Array(60*42),canvas:document.createElement('canvas'),dirty:true}; b.canvas.width=b.w;b.canvas.height=b.h;
+  for(let y=0;y<b.h;y++) for(let x=0;x<b.w;x++) {const cut=Math.max(0,10-y);if(x>=cut&&x<b.w-cut && !(y>25&&x>19&&x<40)) b.pixels[y*b.w+x]=1;}
+  bunkers.push(b);
+ }
+}
+function makeWave() {
+ aliens=[]; for(let r=0;r<5;r++) for(let c=0;c<11;c++) aliens.push({x:43+c*33,y:108+r*30+Math.min(wave-1,5)*8,row:r,col:c,type:r===0?'squid':r<3?'crab':'octopus',points:r===0?30:r<3?20:10});
+ direction=1;frame=0;marchTimer=0;bombTimer=1;ufoTimer=12+Math.random()*8;ufo=null;shot=null;bombs=[];nextWave=0;makeBunkers();$('wave-label').textContent='WAVE '+String(wave).padStart(2,'0');
+}
+function startGame() {unlockAudio();clearInput();score=0;lives=3;wave=1;playerX=211;invulnerable=1.5;deathTimer=0;effects=[];shotCount=0;note=0;makeWave();state='playing';$('overlay').hidden=true;$('pause').disabled=false;$('pause').textContent='Ⅱ PAUSE';}
+function showOverlay(mode) {
+ $('overlay').hidden=false;$('attract').hidden=true;$('attract').style.display='none';
+ $('eyebrow').textContent=mode==='paused'?'TAKE A BREATHER':'THE INVASION CONTINUES';
+ $('title').textContent=mode==='paused'?'GAME PAUSED':'GAME OVER';
+ $('subtitle').textContent='SCORE '+String(score).padStart(5,'0')+' · WAVE '+String(wave).padStart(2,'0');
+ $('start').textContent=mode==='paused'?'RESUME GAME ↗':'PLAY AGAIN ↗';$('hint').textContent=mode==='paused'?'PRESS P / ESC TO RESUME':'PRESS ENTER TO DEFEND AGAIN';
+}
+function pause() {if(state==='playing'){state='paused';clearInput();showOverlay('paused');$('pause').textContent='▶ RESUME';}else if(state==='paused'){unlockAudio();state='playing';$('overlay').hidden=true;$('pause').textContent='Ⅱ PAUSE';}}
+function gameOver() {state='over';saveHigh();clearInput();showOverlay('over');$('pause').disabled=true;}
+function explosion(x,y,color,size=18) {effects.push({x,y,color,t:.35,max:.35,size});}
+function damagePlayer() {if(invulnerable>0||deathTimer>0)return;lives--;explosion(playerX+13,458,GREEN,32);noise(.5,.7);shot=null;bombs=[];if(lives<=0){gameOver();return;}deathTimer=1.1;invulnerable=2.8;}
+function erode(b,x,y) {for(let dy=-7;dy<=7;dy++)for(let dx=-7;dx<=7;dx++){const px=x+dx,py=y+dy;if(px>=0&&px<b.w&&py>=0&&py<b.h&&dx*dx+dy*dy<40+Math.random()*18)b.pixels[py*b.w+px]=0;}b.dirty=true;}
+function hitBunker(x,oldY,newY,width) {
+ const lo=Math.floor(Math.min(oldY,newY)),hi=Math.ceil(Math.max(oldY,newY));
+ for(const b of bunkers) {if(x+width<b.x||x>=b.x+b.w||hi<b.y||lo>=b.y+b.h)continue;
+  const from=newY<oldY?hi:lo,to=newY<oldY?lo:hi,step=newY<oldY?-1:1;
+  for(let y=from;step>0?y<=to:y>=to;y+=step)for(let dx=0;dx<width;dx++){const px=Math.floor(x+dx-b.x),py=y-b.y;if(px>=0&&px<b.w&&py>=0&&py<b.h&&b.pixels[py*b.w+px]){erode(b,px,py);return true;}}
+ }return false;
+}
+function intersect(x,y,w,h,a,b,c,d){return x<a+c&&x+w>a&&y<b+d&&y+h>b;}
+function update(dt) {
+ if(state!=='playing')return;
+ effects=effects.filter(e=>(e.t-=dt)>0);invulnerable=Math.max(0,invulnerable-dt);
+ if(deathTimer>0){deathTimer-=dt;if(deathTimer<=0)playerX=211;return;}
+ if(nextWave>0){nextWave-=dt;if(nextWave<=0){wave++;makeWave();invulnerable=1.5;}return;}
+ playerX=Math.max(14,Math.min(W-40,playerX+((held('right')?1:0)-(held('left')?1:0))*190*dt));
+ if(held('fire')&&!shot){shot={x:playerX+12,y:446};shotCount++;tone(1050,90,.16,'sawtooth',.16);}
+ const interval=Math.max(.065,.76*Math.pow(aliens.length/55,1.45)-Math.min(wave-1,10)*.023);
+ marchTimer+=dt;
+ if(marchTimer>=interval){marchTimer-=interval;frame^=1;const edge=aliens.some(a=>a.x+direction*7<14||a.x+24+direction*7>W-14);if(edge)direction*=-1;
+  for(const a of aliens){a.x+=edge?0:direction*7;a.y+=edge?15:0;for(const b of bunkers){if(intersect(a.x,a.y,24,16,b.x,b.y,b.w,b.h)){for(let y=Math.max(0,Math.floor(a.y-b.y));y<Math.min(b.h,a.y+16-b.y);y++)for(let x=Math.max(0,Math.floor(a.x-b.x));x<Math.min(b.w,a.x+24-b.x);x++)b.pixels[y*b.w+x]=0;b.dirty=true;}}if(a.y+16>=450){gameOver();return;}}
+  const notes=[130.81,116.54,103.83,98];tone(notes[note++%4],45,.095,'square',.26);
+ }
+ if(shot) {
+  const old=shot.y;shot.y-=370*dt;
+  if(hitBunker(shot.x,old,shot.y,2)){shot=null;}
+  else {let hit=-1;for(let i=aliens.length-1;i>=0;i--){const a=aliens[i],sprite=atlas[a.type][frame],ax=a.x+(24-sprite.width)/2;if(intersect(shot.x,shot.y,2,old-shot.y+8,ax,a.y,sprite.width,16)){hit=i;break;}}
+   if(hit>=0){const a=aliens[hit];score+=a.points;saveHigh();explosion(a.x+12,a.y+8,atlas[a.type]===atlas.squid?WHITE:a.row<3?CYAN:GREEN);aliens.splice(hit,1);shot=null;noise(.1,.25);if(!aliens.length){nextWave=1.6;bombs=[];ufo=null;}}
+   else if(ufo&&intersect(shot.x,shot.y,2,old-shot.y+8,ufo.x,72,32,14)){const points=[50,100,150,300][shotCount%4];score+=points;saveHigh();effects.push({x:ufo.x+16,y:76,color:'#ff8585',t:1.2,max:1.2,size:20,text:String(points)});ufo=null;shot=null;tone(650,130,.25);}
+   else if(shot.y<52)shot=null;
+  }
+ }
+ bombTimer-=dt;
+ if(bombTimer<=0&&aliens.length){bombTimer=Math.max(.22,1.05-wave*.055)+Math.random()*.55;if(bombs.length<Math.min(5,2+wave)){const bottom=new Map();for(const a of aliens)if(!bottom.has(a.col)||bottom.get(a.col).y<a.y)bottom.set(a.col,a);const candidates=[...bottom.values()],a=candidates[Math.floor(Math.random()*candidates.length)];bombs.push({x:a.x+11,y:a.y+16,phase:Math.random()*6});}}
+ for(let i=bombs.length-1;i>=0;i--){const b=bombs[i],old=b.y;b.y+=(115+Math.min(wave,10)*9)*dt;b.phase+=dt*15;
+  if(hitBunker(b.x,old+8,b.y+8,3)){bombs.splice(i,1);continue;}
+  if(shot&&intersect(b.x,b.y,3,9,shot.x,shot.y,2,8)){explosion(b.x,b.y,WHITE,9);bombs.splice(i,1);shot=null;continue;}
+  if(intersect(b.x,b.y,3,9,playerX,450,26,16)&&invulnerable<=0){damagePlayer();break;}
+  if(b.y>481)bombs.splice(i,1);
+ }
+ ufoTimer-=dt;
+ if(ufoTimer<=0&&!ufo&&aliens.length){const dir=Math.random()<.5?1:-1;ufo={x:dir===1?-32:W,dir,sound:0};ufoTimer=18+Math.random()*12;}
+ if(ufo){ufo.x+=ufo.dir*55*dt;ufo.sound-=dt;if(ufo.sound<=0){tone(380,650,.12,'sine',.1);ufo.sound=.2;}if(ufo.x>W+32||ufo.x< -64)ufo=null;}
+}
+function text(s,x,y,color=WHITE,size=12,align='left'){ctx.fillStyle=color;ctx.font=`bold ${size}px "Courier New", monospace`;ctx.textAlign=align;ctx.fillText(s,x,y);}
+function draw() {
+ ctx.fillStyle='#020704';ctx.fillRect(0,0,W,H);ctx.imageSmoothingEnabled=false;
+ text('1UP',24,24,WHITE,11);text('HIGH-SCORE',W/2,24,WHITE,11,'center');text('WAVE',W-24,24,WHITE,11,'right');text(String(score).padStart(5,'0'),24,44,GREEN,17);text(String(high).padStart(5,'0'),W/2,44,GREEN,17,'center');text(String(wave).padStart(2,'0'),W-24,44,GREEN,17,'right');
+ ctx.fillStyle='#1b3320';ctx.fillRect(16,55,W-32,1);
+ if(state==='title'){ctx.fillStyle=GREEN;ctx.fillRect(16,481,W-32,1);return;}
+ for(const a of aliens){const sprite=atlas[a.type][frame];ctx.drawImage(sprite,Math.round(a.x+(24-sprite.width)/2),Math.round(a.y));}
+ for(const b of bunkers){if(b.dirty){const g=b.canvas.getContext('2d');g.clearRect(0,0,b.w,b.h);g.fillStyle=GREEN;for(let y=0;y<b.h;y++)for(let x=0;x<b.w;x++)if(b.pixels[y*b.w+x])g.fillRect(x,y,1,1);b.dirty=false;}ctx.drawImage(b.canvas,b.x,b.y);}
+ if(ufo)ctx.drawImage(atlas.ufo[0],Math.round(ufo.x),72);
+ if(deathTimer<=0 && (invulnerable<=0||Math.floor(invulnerable*10)%2===0)&&lives>0)ctx.drawImage(atlas.cannon[0],Math.round(playerX),450);
+ if(shot){ctx.fillStyle=WHITE;ctx.fillRect(Math.round(shot.x),Math.round(shot.y),2,8);}
+ ctx.fillStyle=WHITE;for(const b of bombs){const x=Math.round(b.x),y=Math.round(b.y),p=Math.floor(b.phase)%2;ctx.fillRect(x+p*2,y,2,3);ctx.fillRect(x+(1-p)*2,y+3,2,3);ctx.fillRect(x+p*2,y+6,2,3);}
+ for(const e of effects){ctx.globalAlpha=e.t/e.max;if(e.text)text(e.text,e.x,e.y,e.color,13,'center');else{ctx.fillStyle=e.color;for(let i=0;i<8;i++){const a=i*Math.PI/4,r=(1-e.t/e.max)*e.size;ctx.fillRect(Math.round(e.x+Math.cos(a)*r),Math.round(e.y+Math.sin(a)*r),3,3);}}ctx.globalAlpha=1;}
+ if(nextWave>0)text('WAVE CLEARED',W/2,260,GREEN,17,'center');
+ ctx.fillStyle=GREEN;ctx.fillRect(16,481,W-32,1);text(String(lives),19,502,GREEN,15);for(let i=0;i<Math.max(0,lives-1);i++)ctx.drawImage(atlas.cannon[0],40+i*33,490);text('CREDIT 00',W-20,502,WHITE,11,'right');
+}
+$('start').addEventListener('click',()=>state==='paused'?pause():startGame());$('pause').addEventListener('click',pause);
+$('sound').addEventListener('click',()=>{muted=!muted;unlockAudio();if(master)master.gain.value=muted?0:.22;$('sound').textContent=muted?'SOUND OFF':'SOUND ON';$('sound').setAttribute('aria-pressed',String(!muted));});
+const keyAction={ArrowLeft:'left',KeyA:'left',ArrowRight:'right',KeyD:'right',Space:'fire'};
+// Keep physical keys distinct so releasing A cannot cancel a still-held left arrow.
+const physicalKeys=new Set();
+window.addEventListener('keydown',e=>{if(keyAction[e.code]){if(e.target instanceof HTMLButtonElement&&e.code==='Space')return;e.preventDefault();unlockAudio();physicalKeys.add(e.code);keys.add(keyAction[e.code]);}if(!e.repeat){if(e.code==='KeyP'||e.code==='Escape'){e.preventDefault();pause();physicalKeys.clear();}if(e.code==='Enter'&&(state==='title'||state==='over')&&!(e.target instanceof HTMLButtonElement)){e.preventDefault();startGame();}}});
+window.addEventListener('keyup',e=>{if(keyAction[e.code]){e.preventDefault();physicalKeys.delete(e.code);if(![...physicalKeys].some(k=>keyAction[k]===keyAction[e.code]))keys.delete(keyAction[e.code]);}});
+for(const action of ['left','right','fire']){const button=$(action);button.addEventListener('pointerdown',e=>{e.preventDefault();unlockAudio();button.setPointerCapture(e.pointerId);pointers.set(e.pointerId,action);button.classList.add('active');});const release=e=>{pointers.delete(e.pointerId);if(![...pointers.values()].includes(action))button.classList.remove('active');};button.addEventListener('pointerup',release);button.addEventListener('pointercancel',release);button.addEventListener('lostpointercapture',release);}
+function loseFocus(){clearInput();physicalKeys.clear();if(state==='playing')pause();}
+window.addEventListener('blur',loseFocus);document.addEventListener('visibilitychange',()=>{if(document.hidden)loseFocus();});
+let last=0,accumulator=0;
+function loop(now){const elapsed=Math.min((now-last)/1000,.1);last=now;accumulator+=elapsed;while(accumulator>=1/60){update(1/60);accumulator-=1/60;}draw();requestAnimationFrame(loop);}
+requestAnimationFrame(now=>{last=now;requestAnimationFrame(loop);});
+})();
+</script>
+</body>
+</html>
